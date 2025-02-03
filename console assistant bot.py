@@ -24,7 +24,7 @@ def add_contact(args, contacts):
 
 @input_error
 def change_contact(args, contacts):
-    if len(args) != 2: raise ValueError
+    
     name, phone = args
     if name in contacts:
         contacts[name] = phone
