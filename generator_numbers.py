@@ -3,7 +3,8 @@ import re
 from typing import Callable
 
 def generator_numbers(text: str):
-    pattern = r'\b\d+\.\d+\b'
+    pattern = r'\d+\.\d+'
+    # pattern = r'\b\d+\.\d+\b'
     numbers = re.findall(pattern, text)
     for number in numbers:
         yield float(number)
